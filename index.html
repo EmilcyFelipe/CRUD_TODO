@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD TODO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="tasksWrapper">
+            <div class="insertTask">
+                <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                    <input id="task" type="text" placeholder="Task">
+                    <input type="submit" value="Inserir" >
+                </form>
+            </div>
+            <table>
+                <tr>
+                    <th><h2>To-do</h2></th>
+                </tr>
+                <tbody id="tasks-list">
+
+                </tbody>
+
+            </div>
+            <div class="editing">
+                <form action="javascript:void(0);" method="POST" id="save-edit">
+                    <input id="edit-box" type="text" class="edit-box" >
+                    <input class="btn-save" type="submit" value="Salvar">
+                    <a class="close-edit" onclick="app.Close()">&#10006;</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
